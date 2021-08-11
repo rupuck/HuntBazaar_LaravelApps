@@ -19,6 +19,7 @@ class CreateCustomerResponsesTable extends Migration
             $table->string('customerResponseName')->nullable();
             $table->string('customerResponseDOB')->nullable();
             $table->string('customerResponseGender')->nullable();
+            $table->string('customerRegistrationCode')->nullable();
             $table->string('customerResponseFav')->nullable();
             $table->string('customerResponseStatus')->default(0);
             $table->timestamps();

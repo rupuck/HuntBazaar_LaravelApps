@@ -158,7 +158,7 @@
                                                                                                                                         <td style="font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Roboto&quot;,&quot;Oxygen&quot;,&quot;Ubuntu&quot;,&quot;Cantarell&quot;,&quot;Fira Sans&quot;,&quot;Droid Sans&quot;,&quot;Helvetica Neue&quot;,sans-serif;border-radius:4px"
                                                                                                                                             align="center"
                                                                                                                                             bgcolor="#000000">
-                                                                                                                                            <a href="https://huntstreet.com/"
+                                                                                                                                            <a href="{{ \Illuminate\Support\Facades\URL::to("/auth/verify?token=" . $invitation_link)  }}"
                                                                                                                                                 class="m_-3845285601055419186button__text"
                                                                                                                                                 style="font-size:16px;text-decoration:none;display:block;color:#fff;padding:20px 25px"
                                                                                                                                                 target="_blank"

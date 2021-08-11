@@ -16,6 +16,12 @@
     <link rel="stylesheet" href="/pub/user/css/style.css">
 
     <title>HuntBazaar | HuntStreet </title>
+    <style>
+      .hidden{
+        display:none;
+      }
+
+      </style>
   </head>
   <body>
 
@@ -120,11 +126,13 @@
 
   @section("scripts")
 
-  <script src="/pub/user/js/jquery-3.3.1.min.js"></script>
+    <script src="/pub/user/js/jquery-3.3.1.min.js"></script>
     <script src="/pub/user/js/popper.min.js"></script>
     <script src="/pub/user/js/bootstrap.min.js"></script>
     <script src="/pub/user/js/jquery.validate.min.js"></script>
     <script src="/pub/user/js/main.js"></script>
+    <script src="/pub/user/js/list_designer.js"></script>
+
     <script>
     function includeCSRF() {
         var send = XMLHttpRequest.prototype.send,
@@ -171,34 +179,37 @@ var x = setInterval(function() {
 </script>
 
 <script>
-// anggep aja ini dari db
-let designers = ['bambang', 'susi', 'unggul', 'darma', 'siti'];
-// populate designer data
-let designerEl = document.querySelector('#designers')
+
+let designerEl = $('#designers')
 for (let designer of designers) {
-    designerEl.innerHTML += `
+    designerEl.append(`
     <div class="checking">
         <input type="checkbox" id="${designer}" value="${designer}">${designer}
     </div>
-    `
+    `) 
 }
 
-let inputEl = document.querySelector('#searchbox')
-inputEl.addEventListener('keyup', onInputChange)
+let inputEl = $('#searchbox')
+inputEl.keyup(onInputChange)
 
 function onInputChange(e) {
-    if (inputEl.value != '') {
-        designerEl.className = ''
-        designerEl.querySelectorAll('.checking').forEach(v => {
-            let designerName = sd.querySelector('input').value
-            if (!designerName.includes(inputEl.value)) {
-                v.className = 'checking hidden'
+ 
+     if (inputEl.val() != '') {
+        designerEl.removeClass('hidden')
+        console.log(designerEl.find('.checking'))
+
+        designerEl.find('.checking').each(function() {
+          
+            let designerName = $(this).find('input').val()
+            if (!designerName.toLowerCase().includes(inputEl.val().toLowerCase())) {
+                $(this).addClass('hidden') 
+                
             } else {
-                v.className = 'checking'
+              $(this).removeClass('hidden')
             }
         })
     } else {
-        designerEl.className = 'hidden'
+        designerEl.addClass('hidden') 
     }
 }
 
@@ -214,20 +225,19 @@ $("#formCustomerResponse").on('submit', (e) => {
            let customerResponseDOB = $("#customerResponseDOB").val()
            let customerResponseGender = $("#customerResponseGender").val()
            let invitationID = $("#invitationID").val()
-
-
            customerResponseFav=[]
-          
-
-
-           for(var i=0; i < designers.length; i++){
-            if($('#'+designers[i]).is(':checked')){
-              customerResponseFav.push(designers[i])
-            }
-           }
-
            
-
+           designerEl.find('input[type=checkbox]').each(function() {
+              if ($(this).is(':checked')) {
+                
+                customerResponseFav.push(this.value)
+              }
+            })
+          //  for(var i=0; i < designers.length; i++){
+          //   if($('#'+designers[i]).is(':checked')){
+           // customerResponseFav.push(designers[i])
+          //   }
+          //  }
            customerResponseFav=customerResponseFav.join(',')
 
            console.log("array nya : " + customerResponseFav);

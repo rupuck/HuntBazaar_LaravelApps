@@ -81,7 +81,9 @@
     <div class="menu">
         <ul class="list">
             <li class="header">MAIN NAVIGATION</li>
-            <li><a href="/admin/"><i class="zmdi zmdi-assignment"></i><span>Invitation</span> </a></li>
+            <li><a href="/admin/"><i class="zmdi zmdi-assignment"></i><span>Invitations</span> </a></li>
+            <li><a href="/admin/response"><i class="zmdi zmdi-assignment"></i><span>Responses</span> </a></li>
+
             <!-- <li><a href="/admin/riwayat"><i class="zmdi zmdi-email"></i><span>Riwayat Approval</span> </a></li>
             -->
         </ul>

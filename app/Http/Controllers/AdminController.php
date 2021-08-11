@@ -18,7 +18,8 @@ class AdminController extends Controller
         $invitation->generateToken();
         $invitation->save();
 
-        Mail::to($request->invitationEmail)->send(new InvitationMail());
+        Mail::to($request->invitationEmail)
+        ->send(new InvitationMail($invitation));
         return response()->json(['success' => true]);
 
     }

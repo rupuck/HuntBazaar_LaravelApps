@@ -49,16 +49,28 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Nama</th>
-                                    <th>Tempat Kerja</th>
-                                    <th>HRD Terkait</th>
-                                    <th>Status Kepegawaian</th>
-                                    <th>Status Approval</th>
-                                    <th>Action</th>
+                                    <th>Admin Sender</th>
+                                    <th>Email</th>
+                                    <th>Token Invitation</th>
+                                    <th>Status Invitation</th>
+                                    <th>Created</th>
                                 </tr>
                             </thead>
                            
                             <tbody>
+                            @foreach($inv as $inv)
+
+                            <tr>
+                        <td>{{$loop->iteration}}</td>
+                        <td>{{$inv->adminName}}</td>
+                        <td>{{$inv->invitationEmail}}</td>
+                        <td>{{$inv->link_token}}</td>
+                        <td>{{$inv->invitationStatus}}</td>
+                        <td>{{$inv->created_at}}</td>
+
+</tr>
+
+                                @endforeach
                            
                             </tbody>
                         </table>

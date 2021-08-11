@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Invitation;
+use App\Models\Admin;
+use DB;
 use Session;
 
 class AdminPageController extends Controller
@@ -12,8 +15,15 @@ class AdminPageController extends Controller
     }
 
     public function dashboard() {
-        $value = Session::get('adminActive');
-        return view("admin.index");
+        $inv = DB::table('invitation')
+        ->join('admin','invitation.adminID', '=','admin.adminID')
+        ->get();
+        foreach($inv as $i){
+            if($i->invitationStatus == "0")
+            $i->invitationStatus = "Haven't Responded";
+            else if ($i->invitationStatus == "1") $i->invitationStatus = "Responded";
+        }
+        return view("admin.index")->with(['inv' => $inv]);
     }
 
 

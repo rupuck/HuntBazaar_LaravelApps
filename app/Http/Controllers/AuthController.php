@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Admin;
+use App\Models\CustomerResponse;
 use Session;
 
 class AuthController extends Controller
@@ -16,7 +17,6 @@ class AuthController extends Controller
             if ($request->password == $admin->adminPassword) {
                 $userID = $admin->adminID;
                 $nama = $admin->adminName;
-                
                 $request->session()->put('adminActive', $userID);
                 $request->session()->put('adminName', $nama);
 
@@ -31,5 +31,8 @@ class AuthController extends Controller
         $request->session()->flush();
         return redirect('/admin/login');
     }
+
+   
+
 
 }

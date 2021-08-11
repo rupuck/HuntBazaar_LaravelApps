@@ -14,8 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('email.email_template_invitation');
+    return ("hello");
 });
+
+Route::post('/user/save/response', [\App\Http\Controllers\UserController::class, 'saveResponse']);
+
+Route::get('/auth/verify', [\App\Http\Controllers\UserPageController::class, 'verifyLink']);
+
 
 Route::get('/admin/login', [\App\Http\Controllers\AdminPageController::class, 'adminLogin']);
 Route::post('/admin/backend/auth/login', [\App\Http\Controllers\AuthController::class, 'adminDoLogin']);
