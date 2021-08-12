@@ -1,6 +1,10 @@
 # Technical Test
 Web Developer
 
+Akses admin di /admin
+- id : admin
+- pass : admin
+
 ### Buatlah sebuah website untuk melakukan pendaftaran event HUNTBAZAAR yang akan dilaksanakan pada tanggal 12 Desember 2021 dengan kriteria berikut:
 
 - ** Pendaftaran dibuka hanya untuk undangan. Formulir hanya dapat diisi oleh orang yang memiliki link halaman pendaftaran. Setiap orang mendapatkan link undangan yang berbeda. ✅ **
@@ -33,3 +37,12 @@ Web Developer
 - Queue✅
 - ** Countdown timer harus dibuat sendiri menggunakan jQuery dan VueJS tanpa menggunakan library yang sudah jadi. (full jquery) **
 - ** Kumpulkan jawaban dengan menggunakan repository Bitbucket (ada history commit yang jelas ketika mengerjakan menjadi nilai tambah).✅**
+
+### Screen Shoot
+https://imgur.com/a/wzXWX7O
+
+![alt text](https://i.imgur.com/XUvcx1e.jpg)
+![alt text](https://i.imgur.com/2v7X1Cq.jpg)
+![alt text](https://i.imgur.com/E6kE3w7.jpg)
+![alt text](https://i.imgur.com/7hXckQ0.jpg)
+![alt text](https://i.imgur.com/H6cRaw2.jpg)
