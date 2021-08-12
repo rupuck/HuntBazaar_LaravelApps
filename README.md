@@ -1,63 +1,35 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Technical Test
+Web Developer
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+### Buatlah sebuah website untuk melakukan pendaftaran event HUNTBAZAAR yang akan dilaksanakan pada tanggal 12 Desember 2021 dengan kriteria berikut:
 
-## About Laravel
+- ** Pendaftaran dibuka hanya untuk undangan. Formulir hanya dapat diisi oleh orang yang memiliki link halaman pendaftaran. Setiap orang mendapatkan link undangan yang berbeda. ✅ **
+- ** Link undangan hanya dikirimkan ke email yang diinput oleh admin. Link baru di-generate ketika seseorang / email diundang (perlu buat halaman admin). ✅ **
+- ** Kolom yang wajib diisi di dalam undangan adalah: **
+- Email - autopopulate sesuai dengan email yang diinput oleh admin. ✅**
+- Nama✅
+- Tanggal Lahir✅
+- Jenis Kelamin✅
+- Designer Favorit (untuk list silakan ambil dari halaman ini: ✅  https://www.huntstreet.com/designer (user dapat mengisi lebih dari 1) 
+- ** Setiap undangan hanya dapat diisi satu kali. ✅ **
+- ** Batas waktu pendaftaran adalah 1 bulan dari technical test ini diterima. ✅ **
+- ** Tampilkan countdown timer sisa waktu untuk mendaftar. ✅ **
+- ** Ketika form telah di-submit, tampilkan kode registrasi yang di-generate secara acak. ✅ **
+- ** Ketika link undangan yang telah diisi dibuka kembali, tampilkan kode registrasi pada nomor 7.✅ **
+- ** Satu jam setelah formulir diisi, kirimkan secara otomatis email ucapan terima kasih ke email yang didaftarkan.** ✅
+- ** Admin dapat melihat daftar undangan yang telah dikirimkan dan status undangan tersebut. Status yang disimpan di dalam undangan harus menggunakan foreign key. ✅ **
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Kriteria Teknis
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- ** Design tampilan bebas, namun tetap dipertimbangkan sebagai penilaian. ✅**
+- ** Isi email tidak perlu di-design. ✅**
+- ** Buatlah menggunakan PHP dengan menggunakan framework Laravel (wajib). Harus menggunakan fitur berikut:**
+- Migration✅
+- Seeder✅
+- Eloquent✅
+- Blade✅
+- Middleware✅
+- FormRequest✅
+- Queue✅
+- ** Countdown timer harus dibuat sendiri menggunakan jQuery dan VueJS tanpa menggunakan library yang sudah jadi. (full jquery) **
+- ** Kumpulkan jawaban dengan menggunakan repository Bitbucket (ada history commit yang jelas ketika mengerjakan menjadi nilai tambah).✅**
