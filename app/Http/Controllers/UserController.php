@@ -36,7 +36,7 @@ class UserController extends Controller
 
     public function generateRegistrationCode($length = 7) {
        
-        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $charactersLength = strlen($characters);
         while(true){
         $randomString = '';

@@ -148,8 +148,9 @@
                 },
                 dataType: 'JSON',
                 success: (data) => {
-                    if (!data.success) return showAlert(data.message)
-                     location.reload()
+                    if (!data.success) 
+                    return showAlert(data.message)
+                  
                 }
             })
         })    

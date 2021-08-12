@@ -25,7 +25,7 @@ class AdminController extends Controller
         return response()->json(['success' => true]);
     }
     else{
-        return response()->json(['success' => false]);
+        return response()->json(['error' => "email invitation already exist!"], 400);
     }
 
     }
