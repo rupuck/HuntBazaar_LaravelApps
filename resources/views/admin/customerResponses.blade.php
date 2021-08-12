@@ -16,7 +16,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="body">
-                    <h4>List Invitations</h4>
+                    <h4>List Customer Responses</h4>
 
                     </div>
                 </div>
@@ -49,31 +49,34 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Admin Sender</th>
-                                    <th>Email</th>
-                                    <th>Token Invitation</th>
-                                    <th>Status Invitation</th>
+                                    <th>Invitation ID</th>
+                                    <th>Customer Name</th>
+                                    <th>Customer DOB</th>
+                                    <th>Customer Gender</th>
+                                    <th>Customer Registration Code</th>
+                                    <th>Customer Favorite Brands</th>
                                     <th>Created</th>
                                 </tr>
                             </thead>
                            
                             <tbody>
-                            @foreach($inv as $inv)
+                            @foreach($res as $r)
 
-                            <tr>
+                    <tr>
                         <td>{{$loop->iteration}}</td>
-                        <td>{{$inv->adminName}}</td>
-                        <td>{{$inv->invitationEmail}}</td>
-                        <td>{{$inv->link_token}}</td>
-                        <td>{{$inv->invitationStatus}}</td>
-                        <td>{{$inv->created_at}}</td>
+                        <td>{{$r->invitationID}}</td>
+                        <td>{{$r->customerResponseName}}</td>
+                        <td>{{$r->customerResponseDOB}}</td>
+                        <td>{{$r->customerResponseGender}}</td>
+                        <td>{{$r->customerRegistrationCode}}</td>
+                        <td>{{$r->customerResponseFav}}</td>
+                        <td>{{$r->created_at}}</td>
+                    </tr>
 
-</tr>
-
-                                @endforeach              
+                                @endforeach
+                           
                             </tbody>
                         </table>
-                        <button type="button" class="btn  btn-raised btn-success waves-effect" data-toggle="modal" data-target="#invitationModal"><b>Create New Invitation</b></button>
 
                     </div>
                 </div>
@@ -84,35 +87,6 @@
 
 
    
-
-<div class="modal fade" id="invitationModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title"   id="largeModalLabel">Send Invitation</h4>
-            </div>
-            <div class="modal-body">  <form id="formSendInvitation">
-          
-    <table class="table">
-        <tr>
-            <td>Email </td>
-            <td>:</td>
-            <td>   
-            <input type="text" name="invitationEmail" id="invitationEmail" class="form-control no-resize" required>
-        </tr>
-    </table>
-    <div class="modal-footer">
-    <button type="button" class="btn  btn-raised btn-success waves-effect"  onclick="$('#formSendInvitation').submit()">Invite !</button>
-    <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">CLOSE</button>
-
-                </div>
-</form>
-</div>
-    </div>
-</div>
-        </div>
-    </div>
-</div>
 
 
 

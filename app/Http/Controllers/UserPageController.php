@@ -24,8 +24,7 @@ class UserPageController extends Controller
             return view('form_invitation')->with(['inv' => $inv]);
         }
         else{
-            return ($inv);
+            return view('customerRegistered')->with(['inv' => $inv]);
         } 
-
     }
 }

@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\CustomerResponse;
 use App\Models\Invitation;
+use App\Mail\ThankYou;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Carbon;
 
 use Illuminate\Support\Str;
 
@@ -18,7 +21,16 @@ class UserController extends Controller
         $resp->customerResponseGender = $request->customerResponseGender;
         $resp->customerRegistrationCode = $this->generateRegistrationCode();
         $resp->customerResponseFav = $request->customerResponseFav;
+        
+        $inv = Invitation::where('invitationID', $request->invitationID)->first();
+        $inv->invitationStatus = 1;
+        $inv->save();
         $resp->save();
+
+        Mail::to($inv->invitationEmail)
+        ->later(now()->addMinutes(60), new ThankYou($resp));
+
+        
         return response()->json(['success' => true]);
     }
 

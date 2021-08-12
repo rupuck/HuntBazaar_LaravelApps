@@ -61,48 +61,14 @@
 
 <body>
     <div class="bodycontainer">
-        <table width="100%" cellpadding="0" cellspacing="0" border="0">
-            <tbody>
-                <tr height="14px">
-                    <td width="143">
-                        <img src="./Gmail - Welcome to HuntStreet.com!_files/logo_gmail_server_1x.png" width="143"
-                            height="59" alt="Gmail" class="logo">
-                    </td>
-                    <td align="right">
-                        <font size="-1" color="#777"><b>Andreas Putra wijaya &lt;andreasp9605@gmail.com&gt;</b></font>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <hr>
+        
         <div class="maincontent">
-            <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                <tbody>
-                    <tr>
-                        <td>
-                            <font size="+1"><b>Welcome to HuntStreet.com!</b></font><br>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+           
             <hr>
             <table width="100%" cellpadding="0" cellspacing="0" border="0" class="message">
                 <tbody>
-                    <tr>
-                        <td>
-                            <font size="-1"><b>HuntStreet </b>&lt;info@huntstreet.com&gt;</font>
-                        </td>
-                        <td align="right">
-                            <font size="-1">Mon, Aug 9, 2021 at 1:24 PM</font>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" style="padding-bottom: 4px;">
-                            <font size="-1" class="recipient">
-                                <div>To: andreasp9605@gmail.com</div>
-                            </font>
-                        </td>
-                    </tr>
+                   
+                   
                     <tr>
                         <td colspan="2">
                             <table width="100%" cellpadding="12" cellspacing="0" border="0">
@@ -123,7 +89,9 @@
                                                                                 <tr>
                                                                                     <td style="text-align:center"> <img
                                                                                             style="width:380px;height:40px;margin:0 auto"
-                                                                                            src="./Gmail - Welcome to HuntStreet.com!_files/unnamed.png">
+                                                                                          
+                                                                                           
+                                                                                            src="https://i.imgur.com/NPSa2k1.png">
                                                                                     </td>
                                                                                 </tr>
                                                                             </tbody>
@@ -140,21 +108,15 @@
                                                                                                     <td>
                                                                                                         <p
                                                                                                             style="font-size:14px;color:#000000;margin-bottom:30px;text-align:center">
-                                                                                                            Hi Andreas
-                                                                                                            Putra
-                                                                                                            Wijaya,</p>
+                                                                                                            Hello , {{$nama}}
+                                                                                                           </p>
                                                                                                         <p
                                                                                                             style="font-size:14px;color:#000000;margin-bottom:30px;text-align:center">
-                                                                                                            GREETINGS
-                                                                                                            FROM
-                                                                                                            HUNTSTREET,
-                                                                                                            INDONESIA’S
-                                                                                                            PREMIERE
-                                                                                                            TRUSTED </p>
+                                                                                                           Thank You For Joining Our HuntBazaar Event. See You At 12 December 2021 !</p>
                                                                                                         <p
                                                                                                             style="font-size:14px;color:#000000;margin-bottom:30px;text-align:center">
                                                                                                             <img
-                                                                                                                src="./Gmail - Welcome to HuntStreet.com!_files/unnamed(1).png">
+                                                                                                                src="https://i.imgur.com/8Ch2dxb.png">
                                                                                                         </p>
                                                                                                         <p
                                                                                                             style="font-size:14px;color:#000000;margin-bottom:30px;text-align:center">
@@ -167,40 +129,17 @@
                                                                                                         <p
                                                                                                             style="font-size:14px;color:#000000;margin-bottom:30px;text-align:center">
                                                                                                         </p>
-                                                                                                        <center>
-                                                                                                            <div
-                                                                                                                style="background-color:#000000;width:51%;height:200px;padding:27px">
-                                                                                                                <img style="width:50px"
-                                                                                                                    src="./Gmail - Welcome to HuntStreet.com!_files/unnamed(2).png"
-                                                                                                                    alt="">
-                                                                                                                <p
-                                                                                                                    style="color:#fff!important;margin:10px 0">
-                                                                                                                    VERIFY
-                                                                                                                    YOUR
-                                                                                                                    PROFILE
-                                                                                                                    NOW!
-                                                                                                                </p> <a
-                                                                                                                    href="https://www.huntstreet.com/verify/70d95c3e-f8da-11eb-add6-02a315d77916"
-                                                                                                                    target="_blank"
-                                                                                                                    data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.huntstreet.com/verify/70d95c3e-f8da-11eb-add6-02a315d77916&amp;source=gmail&amp;ust=1628674379605000&amp;usg=AFQjCNFLOZNnnNw_BKN48vvomKuVs-UgxQ">
-                                                                                                                    <button
-                                                                                                                        style="background-color:#fff;color:#000000!important;border:0;padding:10px">
-                                                                                                                        VERIFY
-                                                                                                                        ACCOUNT
-                                                                                                                    </button>
-                                                                                                                </a>
-                                                                                                            </div>
-                                                                                                        </center>
-                                                                                                        <p></p>
+                                                                                                       
+                                                                                                       
                                                                                                         <p
                                                                                                             style="font-size:14px;color:#000000;margin-bottom:30px;text-align:center">
                                                                                                             <img
-                                                                                                                src="./Gmail - Welcome to HuntStreet.com!_files/unnamed(3).png">
+                                                                                                                src="https://i.imgur.com/7pjOlV8.png">
                                                                                                         </p>
                                                                                                         <p
                                                                                                             style="width:800px;font-size:14px;color:#000000;text-align:center">
                                                                                                             <img width="100%"
-                                                                                                                src="./Gmail - Welcome to HuntStreet.com!_files/unnamed.jpg"
+                                                                                                                src="https://i.imgur.com/LsTMe8w.jpg"
                                                                                                                 alt="content">
                                                                                                         </p>
                                                                                                     </td>
@@ -240,7 +179,7 @@
                                                                                                                 style="display:flex">
                                                                                                                 BUYING
                                                                                                                 <img style="width:20px;height:20px;margin:0 10px"
-                                                                                                                    src="./Gmail - Welcome to HuntStreet.com!_files/unnamed(4).png">
+                                                                                                                    src="https://i.imgur.com/qDQYD64.png">
                                                                                                                 +62 813
                                                                                                                 1920
                                                                                                                 8888
@@ -256,7 +195,7 @@
                                                                                                                 style="display:flex">
                                                                                                                 SELLING
                                                                                                                 <img style="width:20px;height:20px;margin:0 10px"
-                                                                                                                    src="./Gmail - Welcome to HuntStreet.com!_files/unnamed(4).png">
+                                                                                                                    src="https://i.imgur.com/qDQYD64.png">
                                                                                                                 +62 811
                                                                                                                 8880 048
                                                                                                             </div>
@@ -271,7 +210,7 @@
                                                                                                     <td
                                                                                                         style="font-size:14px;color:#000000;margin:0 0 15px 0;text-align:center;display:inline-block">
                                                                                                         <img
-                                                                                                            src="./Gmail - Welcome to HuntStreet.com!_files/unnamed(5).png">
+                                                                                                            src="https://i.imgur.com/cSCnNPu.png">
                                                                                                     </td>
                                                                                                 </tr>
                                                                                                 <tr>

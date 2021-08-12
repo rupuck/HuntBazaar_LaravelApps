@@ -42,21 +42,33 @@
             <div class="col-md-12 mr-auto">
               <h3 class="thin-heading mb-4">About BazaarHunt</h3>
               <p>BazaarHunt is biggest annual event from HuntStreet, where we launch various of special deals for our services
-                and special discount for featured items!</p>
-            <div style="text-align: center;"><h1  id="demo"></h1></div>
-                
+                and special discount for featured items! Our even will be held at <b>12 December 2021</b></p>
+            <div style="text-align: center;">
+            
+            <h1  id="timer"></h1>
+          
+            <div id="app">
+         
+           </div>
+            <h1  ></h1>
+           
+
+            Registration Closed at 11 September 2021</div>
+            
             </div>
             <div class="col-md-6 ml-auto">
-             
+
             </div>
+           
           </div>
 
           <div class="row justify-content-center">
             <div class="col-md-12">
-              <h3 class="thin-heading mb-4">Register Now !</h3>
+              
   
 
               <form class="mb-5" id="formCustomerResponse" name="formCustomerResponse">
+              <h3 class="thin-heading mb-4">Register Now !</h3>
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <input type="text" class="form-control" name="customerResponseName" id="customerResponseName" placeholder="Your name">
@@ -132,6 +144,8 @@
     <script src="/pub/user/js/jquery.validate.min.js"></script>
     <script src="/pub/user/js/main.js"></script>
     <script src="/pub/user/js/list_designer.js"></script>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
 
     <script>
     function includeCSRF() {
@@ -147,36 +161,30 @@
 </script>
 
   <script>
-// Set the date we're counting down to
-var countDownDate = new Date("Sept 11, 2021 00:00:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-    
+      $(document).ready(function(){
+      const countDownDate = new Date(2021, 08, 11, 0, 0, 0, 0);
+      countTimer();
+      function countTimer() {
+          setTimeout(countTimer,1000);
+          var now = new Date($.now());
+          var distance = countDownDate - now;
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+          + minutes + "m " + seconds + "s ";
+          if (distance < 0) {
+            clearTimeout(countTimer);
+            $("#timer").html("REGISTRATION CLOSED");
+            $('#formCustomerResponse').remove();
+          }
+        }
+      });    
 </script>
+
+
+     
 
 <script>
 
@@ -193,17 +201,13 @@ let inputEl = $('#searchbox')
 inputEl.keyup(onInputChange)
 
 function onInputChange(e) {
- 
      if (inputEl.val() != '') {
         designerEl.removeClass('hidden')
         console.log(designerEl.find('.checking'))
-
-        designerEl.find('.checking').each(function() {
-          
+        designerEl.find('.checking').each(function() {        
             let designerName = $(this).find('input').val()
             if (!designerName.toLowerCase().includes(inputEl.val().toLowerCase())) {
-                $(this).addClass('hidden') 
-                
+                $(this).addClass('hidden')     
             } else {
               $(this).removeClass('hidden')
             }
@@ -233,15 +237,8 @@ $("#formCustomerResponse").on('submit', (e) => {
                 customerResponseFav.push(this.value)
               }
             })
-          //  for(var i=0; i < designers.length; i++){
-          //   if($('#'+designers[i]).is(':checked')){
-           // customerResponseFav.push(designers[i])
-          //   }
-          //  }
            customerResponseFav=customerResponseFav.join(',')
-
            console.log("array nya : " + customerResponseFav);
-
            $.ajax({
                type: 'POST',
                url: '/user/save/response',
@@ -260,7 +257,7 @@ $("#formCustomerResponse").on('submit', (e) => {
                success: (data) => {
                    if (!data.success) return showAlert(data.message)
                    else alert("Data anda berhasil disimpan!")
-                  //  location.href = '/admin'
+                   location.reload();
                }
            })
        })
