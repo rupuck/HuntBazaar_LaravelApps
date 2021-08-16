@@ -1,9 +1,14 @@
 # Technical Test
 Web Developer
 
-Akses admin di /admin
+Default Seed for admin access
 - id : admin
 - pass : admin
+
+Installation
+```bash
+php artisan migrate:refresh --seed
+```
 
 ### Buatlah sebuah website untuk melakukan pendaftaran event HUNTBAZAAR yang akan dilaksanakan pada tanggal 12 Desember 2021 dengan kriteria berikut:
 
