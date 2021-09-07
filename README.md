@@ -1,5 +1,5 @@
-# Technical Test
-Web Developer
+# Technical Test HuntBazaar
+
 
 Default Seed for admin access
 - id : admin
@@ -10,29 +10,29 @@ Installation
 php artisan migrate:refresh --seed
 ```
 
-### Buatlah sebuah website untuk melakukan pendaftaran event HUNTBAZAAR yang akan dilaksanakan pada tanggal 12 Desember 2021 dengan kriteria berikut:
+### Create a website for registration of an event named HUNTBAZAAR which will be held at 12 December 2021 with following criterias:
 
-- ** Pendaftaran dibuka hanya untuk undangan. Formulir hanya dapat diisi oleh orang yang memiliki link halaman pendaftaran. Setiap orang mendapatkan link undangan yang berbeda. ✅ **
-- ** Link undangan hanya dikirimkan ke email yang diinput oleh admin. Link baru di-generate ketika seseorang / email diundang (perlu buat halaman admin). ✅ **
-- ** Kolom yang wajib diisi di dalam undangan adalah: **
-- Email - autopopulate sesuai dengan email yang diinput oleh admin. ✅**
-- Nama✅
-- Tanggal Lahir✅
-- Jenis Kelamin✅
-- Designer Favorit (untuk list silakan ambil dari halaman ini: ✅  https://www.huntstreet.com/designer (user dapat mengisi lebih dari 1) 
-- ** Setiap undangan hanya dapat diisi satu kali. ✅ **
-- ** Batas waktu pendaftaran adalah 1 bulan dari technical test ini diterima. ✅ **
-- ** Tampilkan countdown timer sisa waktu untuk mendaftar. ✅ **
-- ** Ketika form telah di-submit, tampilkan kode registrasi yang di-generate secara acak. ✅ **
-- ** Ketika link undangan yang telah diisi dibuka kembali, tampilkan kode registrasi pada nomor 7.✅ **
-- ** Satu jam setelah formulir diisi, kirimkan secara otomatis email ucapan terima kasih ke email yang didaftarkan.** ✅
-- ** Admin dapat melihat daftar undangan yang telah dikirimkan dan status undangan tersebut. Status yang disimpan di dalam undangan harus menggunakan foreign key. ✅ **
+- ** Registration can only be accessed by invitation. Registration only can be submited by person who have the link to the registration website. ✅ **
+- ** Registration link only can be send by email that inputted by admin. Link will be generated when the invitation sent. ✅ **
+- ** These are inputs format that must be filled in registartion form: **
+- Email - autopopulate according to email that inputted by admin. ✅**
+- Name✅
+- DoB✅
+- Gender✅
+- Favorit Designer (List can be accessed in this link: ✅  https://www.huntstreet.com/designer (user can choose more than 1) 
+- ** Every invitation only can be submited once ✅ **
+- ** Time limit of the registration is 1 month from the technical test received. ✅ **
+- ** Show countdown timer remained time before the registration closed. ✅ **
+- ** When form submitted, generate random registration code. ✅ **
+- ** After registered, when invitation link registration openned again show registartion code.✅ **
+- ** 1 Hour after submitted the form, automatically send an email for thank you to the registered email. ✅** 
+- ** Admin can see list of invitation that have been sent with the status of the invitation. Status must be saved in the invitation list wih foreign key. ✅ **
 
-### Kriteria Teknis
+### Technical Criterias
 
-- ** Design tampilan bebas, namun tetap dipertimbangkan sebagai penilaian. ✅**
-- ** Isi email tidak perlu di-design. ✅**
-- ** Buatlah menggunakan PHP dengan menggunakan framework Laravel (wajib). Harus menggunakan fitur berikut:**
+- ** No specification for the interface design but will be count for scores. ✅**
+- ** Email doesn't have to be designed. ✅**
+- ** Create the test using PHP with Laravel Framework. List of must have features:**
 - Migration✅
 - Seeder✅
 - Eloquent✅
@@ -40,8 +40,8 @@ php artisan migrate:refresh --seed
 - Middleware✅
 - FormRequest✅
 - Queue✅
-- ** Countdown timer harus dibuat sendiri menggunakan jQuery dan VueJS tanpa menggunakan library yang sudah jadi. (full jquery) **
-- ** Kumpulkan jawaban dengan menggunakan repository Bitbucket (ada history commit yang jelas ketika mengerjakan menjadi nilai tambah).✅**
+- ** Countdown timer must be writen by your own code in jQuery and VueJs without using any built library. ✅**
+- ** Submit the test using BitBucket Repository. (Have a clear commit history while doing the test will be a plus score).✅**
 
 ### Screen Shoot
 https://imgur.com/a/wzXWX7O
