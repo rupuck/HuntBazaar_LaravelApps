@@ -1,4 +1,4 @@
-# Technical Test HuntBazaar
+# HuntBazaar
 
 
 Default Seed for admin access
