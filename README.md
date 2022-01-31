@@ -10,7 +10,7 @@ Installation
 php artisan migrate:refresh --seed
 ```
 
-### Create a website for registration of an event named HUNTBAZAAR which will be held at 12 December 2021 with following criterias:
+### The website is for registration of an event named HUNTBAZAAR which will be held at 12 December 2021 with following criterias:
 
 - ** Registration can only be accessed by invitation. Registration only can be submited by person who have the link to the registration website. ✅ **
 - ** Registration link only can be send by email that inputted by admin. Link will be generated when the invitation sent. ✅ **
